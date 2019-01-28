@@ -22,26 +22,31 @@
 
   <section class="slide clear promo-slide">
     <h2 class="promo-slide__title">Немного о реактивности</h2>
+    <p class="promo-slide__text">в разработке ui</p>
     <!-- <p class="promo-slide__text">Сергей Куксов, Func.</p> -->
     <figure>
-      <img class="cover" src="pictures/first-screen.jpg" alt="Picture placeholder.">
+      <img class="cover" src="pictures/rocket.jpg" alt="Picture placeholder.">
 
       <style>
-        .promo-slide .cover {
+        .cover {
           max-height: fit-content;
           opacity: 0.3;
         }
         h2.promo-slide__title {
           color: #000;
         }
+        .promo-slide__text {
+          font-weight: bold;
+        }
       </style>
     </figure>
   </section>
 
   <section class="slide">
-    <h2>План</h2>
-    <p>Тайминг 10:00 - 10:40</p>
-    <ul lang="en">
+    <h2 class="title">Темы</h2>
+
+    <ul lang="ru">
+      <li>Состояния</li>
       <li>Определение реактивности</li>
       <li>Предпосылки создания</li>
       <li>История и немного знаменитостей</li>
@@ -49,46 +54,150 @@
       <li>Проблемы реализации и поддержки</li>
       <li>Что нас ждет</li>
     </ul>
-  </section>
-
-  <section class="slide">
-    
-  </section>
-
-  <section class="slide">
-    
-  </section>
-
-  <section class="slide">
-    
-  </section>
-
-  <section class="slide">
-    
-  </section>
-
-  <section class="slide">
-    
-  </section>
-
-  <section class="slide">
-    
 
     <style>
-      .browsers {
-        text-align: center;
+      h2.title {
+        color: #000;
       }
-      .browsers__caption {
-        position: absolute;
-        right: 50px;
-        bottom: 50px;
+      .text {
+        color: #000;
+        font-weight: bold;
       }
     </style>
+  </section>
 
+  <section class="slide state-slide">
+    <h2 class="promo-slide__title">Состояния</h2>
+    <p>
+      Турникет имеет 2 состояния
+    </p>
+    <p>
+      и 2 перехода
+    </p>
+
+    <img src="pictures/state-machine.png" alt="" class="">
+    <style>
+      .state-slide img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </section>
+
+  <section class="slide pages-slide">
+    <h2 class="promo-slide__title">
+      Каждая страница это состояние приложения
+    </h2>
+    <p>
+      соответственно между ними есть переходы
+    </p>
+    <img src="pictures/pages.jpg" alt="" class="pages">
+
+    <style>
+      .pages-slide {
+        position: relative;
+      }
+      .pages {
+        height: 140%;
+        min-width: fit-content;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.3;
+        z-index: -1;
+      }
+    </style>
   </section>
 
   <section class="slide">
-    
+    <h2 class="title">
+      Если страницы 2, то переходов...
+      <span class="text next">2</span>
+    </h2>
+    <img src="pictures/state-2.png" alt="" class="img-center">
+
+    <style>
+      img.img-center {
+        display: block;
+        margin: 0 auto;
+        height: 150px;
+        width: 150px;
+      }
+    </style>
+  </section>
+
+  <section class="slide">
+    <h2 class="title">
+      Если страницы 3, то переходов...
+      <span class="text next">6</span>
+    </h2>
+    <img src="pictures/state-3.png" alt="" class="img-center">
+  </section>
+
+  <section class="slide">
+    <h2 class="title">
+      Если страниц 4, то переходов...
+      <span class="text next">12</span>
+    </h2>
+    <img src="pictures/state-4.png" alt="" class="img-center">
+  </section>
+
+  <section class="slide">
+    <h2 class="title">
+      Если страниц 10, то переходов...
+      <span class="text next">90</span>
+    </h2>
+    <img src="pictures/state-10.png" alt="" class="img-center">
+  </section>
+
+  <section class="slide">
+    <h2 class="title">
+      Полный граф
+    </h2>
+    <p class="text big">n * (n - 1)</p>
+    <p class="text">тк есть переходы в 2 стороны делить пополам не нужно.</p>
+
+    <style>
+      .text.big {
+        font-size: 70px;
+      }
+    </style>
+  </section>
+
+  <section class="slide">
+    <p>
+      В ситуации отсутствия клиент-серверного взаимодействия, для 10 состояний программисту необходимо запрограммировать 90 переходов.
+    </p>
+    <p class="next">
+      Проблема?! .(
+    </p>
+  </section>
+
+  <section class="slide">
+    <p>
+      В ситуации клиент-серверного взаимодействия
+    </p>
+    <p>
+      Х экранов = Х переходов
+    </p>
+  </section>
+
+  <section class="slide">
+    <p>Можно ли так же на клиенте?</p>
+    <p>Можно!</p>
+    <h2 class="title">
+      Virtual Dom
+    </h2>
+    <img src="pictures/virtual-dom.jpg" alt="" class="center">
+    <style>
+      img.center {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
   </section>
 
   <section class="slide">
@@ -104,11 +213,12 @@
   </section>
 
   <section class="slide">
-      <h2>Немного о процессе работы</h2>
+    <h2>Немного о процессе работы</h2>
   </section>
 
   <section class="slide">
     <h2 >Этапы</h2>
+
     <ol>
       <li>Изучение макетов</li>
       <li>Выгружаю иконки и нахожу шрифты</li>
@@ -123,6 +233,7 @@
 
   <section class="slide">
     <h2>Инструменты</h2>
+
     <ul>
       <li>Редактор кода, предпочитаю VS Code</li>
       <li>NodeJS</li>
