@@ -1,249 +1,276 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <title>Немного о реактивности</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <style>
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
+      .slide {
+        color: #212121;
+      }
+      .slide::after {
+        position: absolute;
+        top: 0;
+        left: 875px;
+        height: 50px;
+        width: 50px;
+        padding: 0;
+      }
+    </style>
+  </head>
 
-<head>
-  <title>Немного о реактивности</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles/styles.css">
-  <style>
-    .shower {
-      --slide-ratio: calc(16 / 9);
-    }
-  </style>
-</head>
+  <body class="shower list">
+    <header class="caption">
+      <h1>Немного о реактивности</h1>
+      <p>Сергей Куксов, Func. 2019</p>
+    </header>
 
-<body class="shower list">
+    <section class="slide clear promo-slide">
+      <h2 class="promo-slide__title">Немного о реактивности</h2>
+      <p class="promo-slide__text">в разработке ui</p>
+      <!-- <p class="promo-slide__text">Сергей Куксов, Func.</p> -->
+      <figure>
+        <img
+          class="cover"
+          src="pictures/rocket.jpg"
+          alt="Picture placeholder."
+        />
 
-  <header class="caption">
-    <h1>Немного о реактивности</h1>
-    <p>Сергей Куксов, Func. 2019</p>
-  </header>
+        <style>
+          .cover {
+            max-height: fit-content;
+            opacity: 0.3;
+          }
+          h2.promo-slide__title {
+            color: #212121;
+          }
+          .promo-slide__text {
+            font-weight: bold;
+          }
+        </style>
+      </figure>
+    </section>
 
-  <section class="slide clear promo-slide">
-    <h2 class="promo-slide__title">Немного о реактивности</h2>
-    <p class="promo-slide__text">в разработке ui</p>
-    <!-- <p class="promo-slide__text">Сергей Куксов, Func.</p> -->
-    <figure>
-      <img class="cover" src="pictures/rocket.jpg" alt="Picture placeholder.">
+    <section class="slide">
+      <h2 class="title">Темы</h2>
+
+      <ul lang="ru">
+        <li>Состояния</li>
+        <li>Определение реактивности</li>
+        <li>Предпосылки создания</li>
+        <li>История и немного знаменитостей</li>
+        <li>Мифы</li>
+        <li>Проблемы реализации и поддержки</li>
+        <li>Что нас ждет</li>
+      </ul>
 
       <style>
-        .cover {
-          max-height: fit-content;
-          opacity: 0.3;
+        h2.title {
+          color: #212121;
         }
-        h2.promo-slide__title {
-          color: #000;
-        }
-        .promo-slide__text {
+        .text {
+          color: #212121;
           font-weight: bold;
         }
       </style>
-    </figure>
-  </section>
+    </section>
 
-  <section class="slide">
-    <h2 class="title">Темы</h2>
+    <section class="slide state-slide">
+      <h2 class="promo-slide__title">Состояния</h2>
+      <p>Турникет имеет 2 состояния</p>
+      <p>и 2 перехода</p>
 
-    <ul lang="ru">
-      <li>Состояния</li>
-      <li>Определение реактивности</li>
-      <li>Предпосылки создания</li>
-      <li>История и немного знаменитостей</li>
-      <li>Мифы</li>
-      <li>Проблемы реализации и поддержки</li>
-      <li>Что нас ждет</li>
-    </ul>
+      <img src="pictures/state-machine.png" alt="" class="" />
+      <style>
+        .state-slide img {
+          display: block;
+          margin: 0 auto;
+        }
+      </style>
+    </section>
 
-    <style>
-      h2.title {
-        color: #000;
-      }
-      .text {
-        color: #000;
-        font-weight: bold;
-      }
-    </style>
-  </section>
+    <section class="slide pages-slide">
+      <h2 class="promo-slide__title">
+        Каждая страница это состояние приложения
+      </h2>
+      <p>соответственно между ними есть переходы</p>
+      <img src="pictures/pages.jpg" alt="" class="pages" />
 
-  <section class="slide state-slide">
-    <h2 class="promo-slide__title">Состояния</h2>
-    <p>
-      Турникет имеет 2 состояния
-    </p>
-    <p>
-      и 2 перехода
-    </p>
+      <style>
+        .pages-slide {
+          position: relative;
+        }
+        .pages {
+          height: 140%;
+          min-width: fit-content;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          opacity: 0.3;
+          z-index: -1;
+        }
+      </style>
+    </section>
 
-    <img src="pictures/state-machine.png" alt="" class="">
-    <style>
-      .state-slide img {
-        display: block;
-        margin: 0 auto;
-      }
-    </style>
-  </section>
+    <section class="slide">
+      <h2 class="title">
+        Если страницы 2, то переходов... <span class="text next">2</span>
+      </h2>
+      <img
+        src="pictures/state-2.png"
+        alt=""
+        class="img-center"
+      />
 
-  <section class="slide pages-slide">
-    <h2 class="promo-slide__title">
-      Каждая страница это состояние приложения
-    </h2>
-    <p>
-      соответственно между ними есть переходы
-    </p>
-    <img src="pictures/pages.jpg" alt="" class="pages">
+      <style>
+        img.img-center {
+          display: block;
+          margin: 0 auto;
+          height: 200px;
+          width: 200px;
+        }
+      </style>
+    </section>
 
-    <style>
-      .pages-slide {
-        position: relative;
-      }
-      .pages {
-        height: 140%;
-        min-width: fit-content;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        opacity: 0.3;
-        z-index: -1;
-      }
-    </style>
-  </section>
+    <section class="slide">
+      <h2 class="title">
+        Если страницы 3, то переходов... <span class="text next">6</span>
+      </h2>
+      <img src="pictures/state-3.png" alt="" class="img-center" />
+    </section>
 
-  <section class="slide">
-    <h2 class="title">
-      Если страницы 2, то переходов...
-      <span class="text next">2</span>
-    </h2>
-    <img src="pictures/state-2.png" alt="" class="img-center">
+    <section class="slide">
+      <h2 class="title">
+        Если страниц 4, то переходов... <span class="text next">12</span>
+      </h2>
+      <img src="pictures/state-4.png" alt="" class="img-center" />
+    </section>
 
-    <style>
-      img.img-center {
-        display: block;
-        margin: 0 auto;
-        height: 150px;
-        width: 150px;
-      }
-    </style>
-  </section>
+    <section class="slide">
+      <h2 class="title">
+        Если страниц 10, то переходов... <span class="text next">90</span>
+      </h2>
+      <img src="pictures/state-10.png" alt="" class="img-center" />
+    </section>
 
-  <section class="slide">
-    <h2 class="title">
-      Если страницы 3, то переходов...
-      <span class="text next">6</span>
-    </h2>
-    <img src="pictures/state-3.png" alt="" class="img-center">
-  </section>
+    <section class="slide">
+      <h2 class="title">Полный граф</h2>
+      <p class="text big">n * (n - 1)</p>
+      <p class="text">тк есть переходы в 2 стороны делить пополам не нужно.</p>
 
-  <section class="slide">
-    <h2 class="title">
-      Если страниц 4, то переходов...
-      <span class="text next">12</span>
-    </h2>
-    <img src="pictures/state-4.png" alt="" class="img-center">
-  </section>
+      <style>
+        .text.big {
+          font-size: 70px;
+        }
+      </style>
+    </section>
 
-  <section class="slide">
-    <h2 class="title">
-      Если страниц 10, то переходов...
-      <span class="text next">90</span>
-    </h2>
-    <img src="pictures/state-10.png" alt="" class="img-center">
-  </section>
+    <section class="slide">
+      <p>
+        В ситуации отсутствия клиент-серверного взаимодействия, для 10 состояний
+        программисту необходимо запрограммировать 90 переходов.
+      </p>
+      <p class="next">Проблема?! .(</p>
+    </section>
 
-  <section class="slide">
-    <h2 class="title">
-      Полный граф
-    </h2>
-    <p class="text big">n * (n - 1)</p>
-    <p class="text">тк есть переходы в 2 стороны делить пополам не нужно.</p>
+    <section class="slide">
+      <p>В ситуации клиент-серверного взаимодействия</p>
+      <p>Х экранов = Х переходов</p>
+    </section>
 
-    <style>
-      .text.big {
-        font-size: 70px;
-      }
-    </style>
-  </section>
+    <section class="slide">
+      <p>Можно ли так же на клиенте?</p>
+      <p>Можно!</p>
+      <h2 class="title">Virtual Dom</h2>
+      <img src="pictures/virtual-dom.jpg" alt="" class="center" />
+      <style>
+        img.center {
+          display: block;
+          margin: 0 auto;
+        }
+      </style>
+    </section>
 
-  <section class="slide">
-    <p>
-      В ситуации отсутствия клиент-серверного взаимодействия, для 10 состояний программисту необходимо запрограммировать 90 переходов.
-    </p>
-    <p class="next">
-      Проблема?! .(
-    </p>
-  </section>
+    <section class="slide">
+      <h2>ReactJS</h2>
+      <h3>Преимущества:</h3>
+      <ul>
+        <li>Использует виртуальный DOM</li>
+        <li>Работает и на клиенте и на сервере</li>
+        <li>Большое комьюнити. Много компонентов и библиотек</li>
+      </ul>
+    </section>
 
-  <section class="slide">
-    <p>
-      В ситуации клиент-серверного взаимодействия
-    </p>
-    <p>
-      Х экранов = Х переходов
-    </p>
-  </section>
+    <section class="slide">
+      <h3>Недостатки:</h3>
+      <ul>
+        <li>В реальном мире React сам по себе бесполезен</li>
+        <li>Плохая и непонятная документация</li>
+        <!-- <li></li> -->
+      </ul>
+    </section>
 
-  <section class="slide">
-    <p>Можно ли так же на клиенте?</p>
-    <p>Можно!</p>
-    <h2 class="title">
-      Virtual Dom
-    </h2>
-    <img src="pictures/virtual-dom.jpg" alt="" class="center">
-    <style>
-      img.center {
-        display: block;
-        margin: 0 auto;
-      }
-    </style>
-  </section>
+    <section class="slide">
+      <h2 class="title">VueJS</h2>
+      <h3 class="title">Преимущества:</h3>
 
-  <section class="slide">
+      <ul>
+        <li>Низкий порог вхождения</li>
+        <li>
+          Удобная и понятные возможности управления параметрами компонентов
+        </li>
+        <li>
+          Умная отрисовка дом компонентов
+        </li>
+        <li>
+          Удобный CLI
+        </li>
+        <li>
+          Очень очень быстрый
+        </li>
+      </ul>
+    </section>
 
-  </section>
+    <section class="slide">
+      <h3 class="title">Недостатки:</h3>
 
-  <section class="slide">
+      <ul>
+        <li>
+          Сложность, из-за вариативности управления компонентами
+        </li>
+        <li>
+          Непонятно как, из-за вариативности передачи данных от дочернего
+          компонента к родительскому
+        </li>
+        <li>
+          Магия. Потеря реактивности
+        </li>
+        <li>
+          Нет эффективных инструментов для рефакторинга кода
+        </li>
+      </ul>
+    </section>
 
-  </section>
+    <section class="slide">
 
-  <section class="slide">
-    <img class="cover" src="pictures/front-back.jpg" alt="">
-  </section>
+    </section>
 
-  <section class="slide">
-    <h2>Немного о процессе работы</h2>
-  </section>
+    <section class="slide"></section>
 
-  <section class="slide">
-    <h2 >Этапы</h2>
+    <section class="slide"></section>
 
-    <ol>
-      <li>Изучение макетов</li>
-      <li>Выгружаю иконки и нахожу шрифты</li>
-      <li>Подготавливаю окружение</li>
-      <li>Декомпозирую проект на компоненты</li>
-    </ol>
-  </section>
+    <section class="slide"></section>
 
-  <section class="slide">
-    <img class="cover" src="pictures/memes.png" alt="">
-  </section>
+    <section class="slide"></section>
 
-  <section class="slide">
-    <h2>Инструменты</h2>
-
-    <ul>
-      <li>Редактор кода, предпочитаю VS Code</li>
-      <li>NodeJS</li>
-      <li>Yarn</li>
-      <li>Препроцессор SCSS</li>
-      <li>Шаблонизатор PUG</li>
-    </ul>
-  </section>
-
-  <!-- <section class="slide">
+    <!-- <section class="slide">
     <h2>Инструменты</h2>
     <ul>
       <li>Literally viral vegan, ugh drinking vinegar photo booth</li>
@@ -256,7 +283,7 @@
     </ul>
   </section> -->
 
-  <!-- <section class="slide">
+    <!-- <section class="slide">
     <h2>Block Lists</h2>
     <ul>
       <li>Retro meh brunch aesthetic Cosby sweater Shoreditch. Banksy Tumblr sriracha, flexitarian pug chia master
@@ -284,7 +311,7 @@
     </ol>
   </section> -->
 
-  <!-- <section class="slide">
+    <!-- <section class="slide">
     <h2>Latin and Cyrillic List Bullets</h2>
     <ul lang="en">
       <li>Occupy locavore blog, mustache you probably haven’t heard of them</li>
@@ -658,15 +685,14 @@
     <h2 class="shout">The End</h2>
   </section> -->
 
-  <div class="progress"></div>
+    <div class="progress"></div>
 
-  <footer class="badge">
-    <!-- <a href="https://github.com/shower/shower">Fork me on GitHub</a> -->
-  </footer>
+    <footer class="badge">
+      <!-- <a href="https://github.com/shower/shower">Fork me on GitHub</a> -->
+    </footer>
 
-  <script src="node_modules/shower-core/shower.min.js"></script>
+    <script src="node_modules/shower-core/shower.min.js"></script>
 
-  <!-- Copyright © 2018 Sergei Kuksov, Func. -->
-</body>
-
+    <!-- Copyright © 2018 Sergei Kuksov, Func. -->
+  </body>
 </html>
