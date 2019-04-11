@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Немного о реактивности</title>
+    <title>Разговоры о языках программирования</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles/styles.css" />
@@ -25,24 +25,25 @@
 
   <body class="shower list">
     <header class="caption">
-      <h1>Немного о реактивности</h1>
+      <h1>Разговоры о языках программирования</h1>
       <p>Сергей Куксов, Func. 2019</p>
     </header>
 
     <section class="slide clear promo-slide">
-      <h2 class="promo-slide__title">Немного о реактивности</h2>
-      <p class="promo-slide__text">в разработке ui</p>
-      <!-- <p class="promo-slide__text">Сергей Куксов, Func.</p> -->
+      <h2 class="promo-slide__title">Разговоры </h2>
+      <p>о языках программирования</p>
+
       <figure>
         <img
           class="cover"
-          src="pictures/rocket.jpg"
+          src="pictures/progr-lang.jpg"
           alt="Picture placeholder."
         />
 
         <style>
           .cover {
-            max-height: fit-content;
+            /* max-height: fit-content; */
+            width: 100%;
             opacity: 0.3;
           }
           h2.promo-slide__title {
@@ -64,28 +65,70 @@
       </figure>
     </section>
 
-    <!-- <section class="slide"> -->
-      <!-- <h2 class="title">Темы</h2>
+    <section class="slide">
+      <h2 class="title">О чем речь:</h2>
 
       <ul lang="ru">
-        <li>Состояния</li>
-        <li>Определение реактивности</li>
-        <li>Предпосылки создания</li>
-        <li>История и немного знаменитостей</li>
-        <li>Мифы</li>
-        <li>Проблемы реализации и поддержки</li>
-        <li>Что нас ждет</li>
-      </ul> -->
+        <li>Что такое ЯП?</li>
+        <li>Какие бывают</li>
+        <li>И всякие холиварные темы...</li>
+      </ul>
+    </section>
 
+    <section class="slide">
+      <h2 class="title">Что такое ЯП</h2>
 
-    <!-- </section> -->
+      <p>
+        Язык программи́рования — формальный язык, предназначенный для записи компьютерных программ. Язык программирования определяет набор лексических, синтаксических и семантических правил, определяющих внешний вид программы и действия, которые выполнит исполнитель (обычно — ЭВМ) под её управлением.
+      </p>
+      <span class="small next">спасибо, википедии</span>
+      <style>
+        span.small {
+          color: #555;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <h2 class="title">Разделение ЯП</h2>
+      <p>По парадигмам</p>
+      <ul>
+        <li>Императивная</li>
+        <li>Функциональное</li>
+        <li>Объектно-ориентированные</li>
+        <li>Мультипарадигмальные</li>
+        <li>Другие</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2 class="title">Разделение ЯП</h2>
+      <p>По типизация</p>
+      <ul>
+        <li>Статическая</li>
+        <li>Динамическая</li>
+        <li>Явная</li>
+        <li>Неявная</li>
+        <li>Другие</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2 class="title">Разделение ЯП</h2>
+      <p>Компилируемый</p>
+      <p>или</p>
+      <p>Интерпритируемый</p>
+    </section>
+
+    <section class="slide">
+      <h2 class="title">Разделение ЯП</h2>
+      <p>А так же</p>
+      <p>по особенностям работы с памятью, поточностью и тд.</p>
+    </section>
 
     <section class="slide state-slide">
-      <h2 class="promo-slide__title">Состояния</h2>
-      <p>Турникет имеет 2 состояния</p>
-      <p>и 2 перехода</p>
-
-      <img src="pictures/state-machine.png" alt="" class="" />
+      <img src="pictures/c.jpg" alt="" class="" />
+      <p>У вас есть С. У вас есть библиотека для замка и для принцессы. В атаку! Вы спасаете принцессу, ее собаку, весь ее гардероб и всё, что она когда-либо съела. Fuck, неужели я забыл null-terminator?</p>
       <style>
         .state-slide img {
           display: block;
@@ -94,7 +137,230 @@
       </style>
     </section>
 
-    <section class="slide pages-slide">
+    <section class="slide">
+      <h2>C/С+</h2>
+      <ul>
+        <li>Компилируемый</li>
+        <li>Статически типизированный</li>
+      </ul>
+      <p>Язык широкого назначения. Нет ничего быстрее Си</p>
+    </section>
+
+    <section class="slide state-slide">
+      <img src="pictures/c_.jpg" alt="" class="" />
+      <p>У вас есть C#. Вы тратите несколько часов, чтобы написать все спасение в один LINQ QUERY. Вы сдаетесь и идете на StackOverflow и просите Джона Скита (или VladD) спасти принцессу за вас.</p>
+      <style>
+        .state-slide img {
+          display: block;
+          margin: 0 auto;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <h2>C#</h2>
+      <ul>
+        <li>Компилируемый</li>
+        <li>Объектно-ориентированный</li>
+        <li>Статическая и динамическая типизация</li>
+      </ul>
+      <p>.NET и разработка игр</p>
+    </section>
+
+    <section class="slide state-slide">
+      <img src="pictures/java.jpg" alt="" class="" />
+      <p>У вас есть Java. Вы быстренько переводите спасение принцессы в продакшн. Вы обнаруживаете, что загрузили две версии замка и забыли принцессу.</p>
+      <style>
+        .state-slide img {
+          display: block;
+          margin: 0 auto;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <h2>Java</h2>
+      <ul>
+        <li>Компилируемый</li>
+        <li>Объектно-ориентированный</li>
+        <li>Сильно типизированный</li>
+      </ul>
+      <p>Вообще для всего</p>
+    </section>
+
+    <section class="slide state-slide">
+      <img src="pictures/js.jpg" alt="" class="" />
+      <p>У вас есть JavaScript. Вы тратите несколько часов на сбор библиотек, настройку node и постройку фреймворка для замка. К тому времени, как вы разберетесь с фреймворком, форт уже будет заброшен, а принцесса переберется в другой замок.</p>
+      <style>
+        .state-slide img {
+          display: block;
+          margin: 0 auto;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <h2>JavaScript</h2>
+      <ul>
+        <li>мультипарадигмальный</li>
+        <li>Объектно-ориентированный</li>
+        <li>Динамическая типизация, слабая типизация</li>
+      </ul>
+      <p>Работает в браузере. Работает не только в браузере.)</p>
+    </section>
+
+    <section class="slide state-slide">
+      <img src="pictures/lisp.jpg" alt="" class="" />
+      <p>У вас есть Lisp.</p>
+      <style>
+        .state-slide img {
+          display: block;
+          margin: 0 auto;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <h2>Lisp</h2>
+      <ul>
+        <li>Компилируемый</li>
+        <li>Мультипарадигмальный</li>
+        <li>Объектно-ориентированный, функциональный, императивный, метаязык</li>
+        <li>Динамическая типизация, сильная типизация</li>
+      </ul>
+      <p>Разработка систем с искуственным интелектом</p>
+    </section>
+
+    <section class="slide state-slide">
+      <img src="pictures/go.jpg" alt="" class="" />
+      <p>У вас есть Go. Мы не поддерживаем спасение захваченных принцесс, зато у нас есть освобожденные принцесы в стандартной библ… Стопэ, это принцесса из Java панели?</p>
+      <style>
+        .state-slide img {
+          display: block;
+          margin: 0 auto;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <h2>Go</h2>
+      <ul>
+        <li>компилируемый</li>
+        <li>императивный</li>
+        <li>строгая, статическая типизация</li>
+      </ul>
+      <p>Разработан компанией Google. Не путать с Go!</p>
+    </section>
+
+    <section class="slide state-slide">
+      <img src="pictures/pascal.jpg" alt="" class="" />
+      <p>У вас есть Pascal. Вы объявляете принцессу, замок и план спасения. Вы решаете выпить и забываете о реализации.</p>
+      <style>
+        .state-slide img {
+          display: block;
+          margin: 0 auto;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <h2>Pascal</h2>
+      <ul>
+        <li>компилируемый</li>
+        <li>императивный</li>
+        <li>сильная, статическая типизация</li>
+      </ul>
+      <p>Используется для обучения программированию в старших классах и на первых курсах вузов</p>
+    </section>
+
+    <section class="slide state-slide">
+      <img src="pictures/php.jpg" alt="" class="" />
+      <p>У вас есть PHP. Вы должны спасти принцессу… на PHP…</p>
+      <style>
+        .state-slide img {
+          display: block;
+          margin: 0 auto;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <h2>PHP</h2>
+      <ul>
+        <li>Мультипарадигмальный язык</li>
+        <li>Интерпретируемый</li>
+        <li>Слабая динамическая типизация</li>
+      </ul>
+      <p>Personal Home Page. Скриптовый язык общего назначения. Очень распространен.</p>
+    </section>
+
+    <section class="slide state-slide">
+      <img src="pictures/python.jpg" alt="" class="" />
+      <p>Python. Вы импортируете библиотеку спасения принцессы и спасаете принцессу. Стоп, почему ваша принцесса выглядит как утка и плавает, как утка?</p>
+      <style>
+        .state-slide img {
+          display: block;
+          margin: 0 auto;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <h2>Python</h2>
+      <ul>
+        <li>мультипарадигменный</li>
+        <li>Интерпретируемый</li>
+        <li>Сильная, динамическая типизация</li>
+      </ul>
+      <p>Python. Вы импортируете библиотеку спасения принцессы и спасаете принцессу. Стоп, почему ваша принцесса выглядит как утка и плавает, как утка? Применение: data science, web, автоматизация</p>
+    </section>
+
+    <section class="slide">
+      <h2>Ruby</h2>
+      <ul>
+        <li>мультипарадигменный</li>
+        <li>Интерпретируемый</li>
+        <li>строгая, динамическая (утиная)</li>
+      </ul>
+      <p>Идеален для прототипирования. Будь ленивым.</p>
+    </section>
+
+    <section class="slide">
+      <h2>Dart</h2>
+      <ul>
+        <li>объектно-ориентированный </li>
+        <li>Интерпретируемый</li>
+        <li>статическая</li>
+      </ul>
+      <p>Компилируется в JavaScript. Разработка интерфейсов. И снова google.</p>
+    </section>
+
+    <section class="slide">
+      <h2>Еще</h2>
+      <ul>
+        <li>Objective-C</li>
+        <li>Scala</li>
+        <li>Assemblers</li>
+        <li>Clojure</li>
+        <li>Delphi</li>
+        <li>F#</li>
+
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Еще</h2>
+      <ul>
+        <li>Haskell</li>
+        <li>Lua</li>
+        <li>Perl</li>
+        <li>Swift</li>
+        <li>Visual Basic</li>
+      </ul>
+      <p>И еще около 400 ЯП</p>
+      <p class="next">И не ЯП</p>
+    </section>
+
+    <!--<section class="slide pages-slide">
       <h2 class="promo-slide__title">
         Каждая страница это состояние приложения
       </h2>
@@ -138,149 +404,19 @@
           width: 200px;
         }
       </style>
+    </section> -->
+
+
+    <section class="slide">
+      <h2>Что есть хороший код?</h2>
+      <p>Хороший код легко читать и легко поддерживать</p>
+      <a href="https://mkdev.me/posts/kak-vybrat-yazyk-programmirovaniya">Как выбирать ЯП</a>
+      <a href="https://mkdev.me/posts/kak-vsyo-taki-vybrat-pervyy-yazyk-programmirovaniya-ili-kak-zadavat-pravilnye-voprosy">И еще Как выбирать ЯП</a>
     </section>
 
     <section class="slide">
-      <h2 class="title">
-        Если страницы 3, то переходов... <span class="text next">6</span>
-      </h2>
-      <img src="pictures/state-3.png" alt="" class="img-center" />
-    </section>
-
-    <section class="slide">
-      <h2 class="title">
-        Если страниц 4, то переходов... <span class="text next">12</span>
-      </h2>
-      <img src="pictures/state-4.png" alt="" class="img-center" />
-    </section>
-
-    <section class="slide">
-      <h2 class="title">
-        Если страниц 10, то переходов... <span class="text next">90</span>
-      </h2>
-      <img src="pictures/state-10.png" alt="" class="img-center" />
-    </section>
-
-    <section class="slide">
-      <h2 class="title">Полный граф</h2>
-      <p class="text big">n * (n - 1)</p>
-      <p class="text">тк есть переходы в 2 стороны делить пополам не нужно.</p>
-
-      <style>
-        .text.big {
-          font-size: 70px;
-        }
-      </style>
-    </section>
-
-    <section class="slide">
-      <p>
-        В ситуации отсутствия клиент-серверного взаимодействия, для 10 состояний
-        программисту необходимо запрограммировать 90 переходов.
-      </p>
-      <p class="next">Проблема?! .(</p>
-    </section>
-
-    <section class="slide">
-      <p>В ситуации клиент-серверного взаимодействия</p>
-      <p>Х экранов = Х переходов</p>
-    </section>
-
-    <section class="slide">
-      <p>Можно ли так же на клиенте?</p>
-      <p>Можно!</p>
-      <h2 class="title">Virtual Dom</h2>
-      <img src="pictures/virtual-dom.jpg" alt="" class="center" />
-      <style>
-        img.center {
-          display: block;
-          margin: 0 auto;
-        }
-      </style>
-    </section>
-
-    <section class="slide">
-      <h2>ReactJS</h2>
-      <h3>Преимущества:</h3>
-      <ul>
-        <li>Использует виртуальный DOM</li>
-        <li>Работает и на клиенте и на сервере</li>
-        <li>Большое комьюнити. Много компонентов и библиотек</li>
-      </ul>
-    </section>
-
-    <section class="slide">
-      <h3>Недостатки:</h3>
-      <ul>
-        <li>В реальном мире React сам по себе бесполезен</li>
-        <li>Плохая и непонятная документация</li>
-      </ul>
-    </section>
-
-    <section class="slide">
-      <h2>Примеры сайтов на React</h2>
-
-      <p><a href="https://www.pochta.ru/">https://www.pochta.ru/</a></p>
-      <p></p><a href="https://meduza.io/">https://meduza.io/</a></p>
-      <p></p><a href="https://www.aviasales.ru/">https://www.aviasales.ru/</a></p>
-      <p></p><a href="https://vk.com/">https://vk.com/</a></p>
-      <p></p>И конечно <a href="https://www.facebook.com/">https://www.facebook.com/</a></p>
-    </section>
-
-    <section class="slide">
-      <h2 class="title">VueJS</h2>
-      <h3 class="title">Преимущества:</h3>
-
-      <ul>
-        <li>Низкий порог вхождения</li>
-        <li>
-          Удобная и понятные возможности управления параметрами компонентов
-        </li>
-        <li>
-          Умная отрисовка дом компонентов
-        </li>
-        <li>
-          Удобный CLI
-        </li>
-        <li>
-          Очень очень быстрый
-        </li>
-      </ul>
-    </section>
-
-    <section class="slide">
-      <h3 class="title">Недостатки:</h3>
-
-      <ul>
-        <li>
-          Сложность, из-за вариативности управления компонентами
-        </li>
-        <li>
-          Непонятно как, из-за вариативности передачи данных от дочернего
-          компонента к родительскому
-        </li>
-        <li>
-          Магия. Потеря реактивности
-        </li>
-        <li>
-          Нет эффективных инструментов для рефакторинга кода
-        </li>
-      </ul>
-    </section>
-
-    <section class="slide">
-      <h2>Примеры сайтов на Vue</h2>
-
-      <p></p><a href="https://www.ozon.ru/">https://www.ozon.ru/</a></p>
-      <p></p><a href="https://1xbet.com/">https://1xbet.com/</a></p>
-      <p><a href="https://qwintry.com/ru">Бандеролька</a></p>
-      <p><a href="https://zenmate.com/">https://zenmate.com/</a></p>
-      <!-- <p></p>И конечно <a href="https://www.facebook.com/">https://www.facebook.com/</a></p> -->
-    </section>
-
-    <section class="slide">
-      <h2>Есть еще Angular и много чего еще, <br>но на сегодня хватит.</h2>
-      <p>продолжение следует...</p>
+      <h2>Код надо писать так</h2>
+      <p>Будто его будет читать маньяк, который знает где вы живете.</p>
     </section>
 
 
