@@ -1,2 +1,2 @@
-# basic-of-lang
+# basic-of-ssr
 
