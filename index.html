@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Разговоры о серверном рендеринге</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <style>
+    .shower {
+      --slide-ratio: calc(16 / 9);
+    }
+
+    .slide {
+      color: #212121;
+    }
+
+    .slide::after {
+      position: absolute;
+      top: 0;
+      left: 875px;
+      height: 50px;
+      width: 50px;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body class="shower list">
+  <header class="caption">
+    <h1>Разговоры о серверном рендеринге</h1>
+    <p>Сергей Куксов, Func. 2019</p>
+  </header>
+
+  <section class="slide clear promo-slide">
+    <h2 class="promo-slide__title">Разговоры </h2>
+    <p>о серверном рендеринге</p>
+
+    <figure>
+      <img class="cover" src="pictures/renderfarm.jpg" alt="Picture placeholder." />
+
+      <style>
+        .cover {
+          /* max-height: fit-content; */
+          height: 100%;
+          opacity: 0.3;
+        }
+
+        h2.promo-slide__title {
+          color: #212121;
+        }
+
+        .promo-slide__text {
+          font-weight: bold;
+        }
+      </style>
+      <style>
+        h2.title {
+          color: #212121;
+        }
+
+        .text {
+          color: #212121;
+          font-weight: bold;
+        }
+      </style>
+    </figure>
+  </section>
+
+  <section class="slide">
+    <h2 class="title">О чем речь:</h2>
+
+    <ul lang="ru">
+      <li>Терминология</li>
+      <li>CSR vs SSR</li>
+      <li>И всякие холиварные темы...</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2 class="title">Отображение:</h2>
+
+    <ul>
+      <li>SSR (Server-Side Rendering, серверный рендеринг) — рендеринг на сервере клиентской части или универсального
+        приложения в HTML;</li>
+      <li>CSR (Client-Side Rendering, рендеринг на клиенте) — рендеринг приложения на стороне клиента (в браузере),
+        обычно с помощью DOM;</li>
+      <li>Регидратация — «загрузка» JavaScript компонентов на клиенте таким образом, чтобы они повторно использовали
+        DOM-дерево и данные HTML, сформированные на стороне сервера;</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <ul>
+      <li>Пререндеринг — запуск клиентского приложения во время сборки для сохранения его начального состояния в виде
+        статического HTML.</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2 class="title">Производительность:</h2>
+
+    <ul>
+      <li>TTFB (Time to First Byte, время до первого байта) — время между кликом по ссылке и поступлением первого
+        фрагмента содержимого;</li>
+      <li>FP (First Paint, первая отрисовка) — первый случай, когда пользователю становится виден любой пиксель;</li>
+      <li>FCP (First Contentful Paint, первая содержательная отрисовка) — время первого отображения запрашиваемого
+        содержимого (например, статьи);</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <ul>
+      <li>TTI (Time To Interactive, время до интерактивности) — момент времени, в который страница становится
+        интерактивной (закрепляются все события и т. д.).</li>
+    </ul>
+  </section>
+
+  <section class="slide state-slide">
+    <img src="pictures/csr.png" alt="" class="" />
+
+    <style>
+      .state-slide img {
+        display: block;
+        margin: 0 auto;
+        /* width: 100%; */
+        height: 100%;
+      }
+    </style>
+  </section>
+
+  <section class="slide state-slide">
+    <img src="pictures/csr-map.png" alt="" class="" />
+
+    <style>
+      .state-slide img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        /* height: 100%; */
+        min-height: 1px;
+        object-fit: contain;
+      }
+    </style>
+  </section>
+
+  <section class="slide state-slide">
+    <img src="pictures/ssr.png" alt="" class="" />
+
+    <style>
+      .state-slide img {
+        display: block;
+        margin: 0 auto;
+        /* width: 100%; */
+        height: 100%;
+      }
+    </style>
+  </section>
+
+  <section class="slide state-slide">
+    <img src="pictures/ssr-map1.png" alt="" class="" />
+
+    <style>
+      .state-slide img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        /* height: 100%; */
+        min-height: 1px;
+        object-fit: contain;
+      }
+    </style>
+  </section>
+  <section class="slide state-slide">
+    <img src="pictures/ssr-map2.png" alt="" class="" />
+
+    <style>
+      .state-slide img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        /* height: 100%; */
+        min-height: 1px;
+        object-fit: contain;
+      }
+    </style>
+  </section>
+  <section class="slide state-slide">
+    <img src="pictures/ssr-map3.png" alt="" class="" />
+
+    <style>
+      .state-slide img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        /* height: 100%; */
+        min-height: 1px;
+        object-fit: contain;
+      }
+    </style>
+  </section>
+
+
+
+  <div class="progress"></div>
+
+  <footer class="badge">
+    <!-- <a href="https://github.com/shower/shower">Fork me on GitHub</a> -->
+  </footer>
+
+  <script src="shower/shower.min.js"></script>
+
+  <!-- Copyright © 2019 Sergei Kuksov, Func. -->
+</body>
+
+</html>
